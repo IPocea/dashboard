@@ -1,0 +1,61 @@
+<div class="table-container">
+  <table>
+    <thead>
+      <tr>
+        <th class="text-start">
+          <span>Employee</span><mat-icon>keyboard_arrow_down</mat-icon>
+        </th>
+        <th class="text-start">
+          Work desription<mat-icon>keyboard_arrow_down</mat-icon>
+        </th>
+        <th>Tag<mat-icon>keyboard_arrow_down</mat-icon></th>
+        <th>Date<mat-icon>keyboard_arrow_down</mat-icon></th>
+        <th>Duration<mat-icon>keyboard_arrow_down</mat-icon></th>
+        <th>Estimate<mat-icon>keyboard_arrow_down</mat-icon></th>
+        <th>Amount<mat-icon>keyboard_arrow_down</mat-icon></th>
+      </tr>
+    </thead>
+    <tbody>
+      <ng-container *ngIf="data.length">
+        <tr *ngFor="let task of data">
+          <td>{{ task.user.fName + " " + task.user.lName }}</td>
+          <td class="text-ellipsis">{{ task.description }}</td>
+          <td class="text-center">
+            <p
+              [ngClass]="[
+                task.tag.toLowerCase() === 'design'
+                  ? 'tag text-center design'
+                  : 'tag text-center',
+                task.tag.toLowerCase() === 'programming'
+                  ? 'tag text-center programming'
+                  : 'tag text-center',
+                task.tag.toLowerCase() === 'networks'
+                  ? 'tag text-center networks'
+                  : 'tag text-center',
+                task.tag.toLowerCase() === 'others'
+                  ? 'tag text-center others'
+                  : 'tag text-center'
+              ]"
+            >
+              {{ task.tag }}
+            </p>
+          </td>
+          <td class="text-center">{{ task.date  | customDate }}</td>
+          <td class="text-center">{{ task.duration + task.timeMeasure }}</td>
+          <td class="text-end">
+            {{
+              task.estimateAmount +
+                task.estimateMeasureType +
+                " " +
+                task.estimateCurrency
+            }}
+          </td>
+          <td class="text-end">
+            {{ task.ammount + " " + task.amountCurrency }}
+            <mat-icon>edit</mat-icon>
+          </td>
+        </tr>
+      </ng-container>
+    </tbody>
+  </table>
+</div>

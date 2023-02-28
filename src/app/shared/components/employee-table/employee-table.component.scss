@@ -1,0 +1,28 @@
+@import "../../../../styles/index.scss";
+
+:host {
+  div.table-container {
+    overflow-x: auto;
+    margin-top: 20px;
+    table {
+      width: 100%;
+      border-collapse: collapse; 
+      thead,
+      tbody {
+        tr {
+          border-bottom: 1px solid $tenary;
+          th, td {
+            padding: 5px;
+            font-size: 12px;
+            vertical-align: bottom;
+            mat-icon {
+              width: 12px;
+              height: 12px;
+              font-size: 14px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

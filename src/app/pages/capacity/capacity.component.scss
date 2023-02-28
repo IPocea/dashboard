@@ -1,0 +1,19 @@
+@import '../../../styles/variables.scss';
+
+:host {
+  div.capacity-container {
+    div.capacity-chart-container {
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      box-sizing: border-box;
+      .bar-chart {
+        width: 70%;
+      }
+      .doughnutChart {
+        width: 30%;
+      }
+    }
+
+  }
+}

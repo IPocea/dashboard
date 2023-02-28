@@ -1,0 +1,24 @@
+<div *ngIf="!isLoading; else loading" class="capacity-container">
+  <div class="capacity-chart-container">
+    <app-bar-chart
+      *ngIf="hoursPerDay.length && tags.length && dates.length"
+      class="bar-chart"
+      [hoursPerDay]="hoursPerDay"
+      [tags]="tags"
+      [dates]="dates"
+    ></app-bar-chart>
+    <app-doughnut-chart
+      *ngIf="totalHours && tags.length"
+      class="doughnutChart"
+      [totalHours]="totalHours"
+      [tags]="tags"
+    ></app-doughnut-chart>
+  </div>
+  <app-employee-table [data]="data"></app-employee-table>
+</div>
+
+<ng-template #loading>
+  <div class="spinner-container">
+    <mat-spinner></mat-spinner>
+  </div>
+</ng-template>

@@ -1,0 +1,58 @@
+.hidden {
+  visibility: hidden;
+}
+
+.spinner-container {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.mat-icon-size {
+  font-size: 35px;
+  height: 35px;
+  width: 35px;
+}
+
+.text-ellipsis {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-start {
+  text-align: start;
+}
+
+.text-end {
+  text-align: end;
+}
+
+.design {
+  background-color: $primaryLightier;
+}
+
+.programming {
+  background-color: $primaryLight;
+}
+
+.networks {
+  background-color: $primary;
+}
+
+.others {
+  background-color: $primaryExtraLight;
+}
+
+.tag {
+  width: 100%;
+  color: $secondary;
+  padding: 2px 5px;
+  border: none;
+  border-radius: 50vh 50vh;
+}

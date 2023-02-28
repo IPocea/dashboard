@@ -1,0 +1,52 @@
+<div class="general-info-container">
+  <header>
+    <nav>
+      <mat-button-toggle-group
+        name="fontStyle"
+        aria-label="Font Style"
+        value="capacity"
+      >
+        <mat-button-toggle routerLink="/projects/general-info/info" value="info"
+          >Info</mat-button-toggle
+        >
+        <mat-button-toggle
+          routerLink="/projects/general-info/sprint-goals"
+          value="sprint-goals"
+          >Sprint Goals</mat-button-toggle
+        >
+        <mat-button-toggle
+          routerLink="/projects/general-info/metrics-and-kpis"
+          value="metrics-and-kpis"
+          >Metrics and KPIs</mat-button-toggle
+        >
+        <mat-button-toggle
+          routerLink="/projects/general-info/risk-matrix"
+          value="risk-matrix"
+          >Risk Matrix</mat-button-toggle
+        >
+        <mat-button-toggle
+          routerLink="/projects/general-info/capacity"
+          value="capacity"
+          >Capacity</mat-button-toggle
+        >
+        <mat-button-toggle
+          routerLink="/projects/general-info/release-notes"
+          value="release-notes"
+          >Release Notes</mat-button-toggle
+        >
+        <mat-button-toggle
+          routerLink="/projects/general-info/updates"
+          value="updates"
+          >Updates</mat-button-toggle
+        >
+      </mat-button-toggle-group>
+    </nav>
+    <nav>
+      <mat-icon class="mat-icon-size">cloud_download</mat-icon>
+      <mat-icon class="mat-icon-size">local_offer</mat-icon>
+    </nav>
+  </header>
+  <section class="inerr-routing-lvl-2">
+    <router-outlet></router-outlet>
+  </section>
+</div>
